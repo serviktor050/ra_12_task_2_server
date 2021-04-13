@@ -4,7 +4,9 @@
   "description": "Реакт. Лекция 12. Сервер для задачи 2.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart": "npm install",
+    "start": "forever server.js",
+    "watch": "forever -w server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,13 @@
   "bugs": {
     "url": "https://github.com/serviktor050/ra_12_task_2_server/issues"
   },
-  "homepage": "https://github.com/serviktor050/ra_12_task_2_server#readme"
+  "homepage": "https://github.com/serviktor050/ra_12_task_2_server#readme",
+  "dependencies": {
+    "forever": "^3.0.4",
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-router": "^10.0.0",
+    "koa2-cors": "^2.0.6",
+    "nanoid": "^3.1.22"
+  }
 }
